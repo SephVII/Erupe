@@ -32,7 +32,7 @@ func handleMsgSysGetFile(s *Session, p mhfpacket.MHFPacket) {
 			doAckBufSucceed(s, pkt.AckHandle, data)
 		} else {
 			// Get quest file.
-			data, err := ioutil.ReadFile(filepath.Join(s.server.erupeConfig.BinPath, fmt.Sprintf("quests/%s.bin", pkt.Filename)))
+			s.logger.Debug(fmt.Sprintf("Opening quest file: quests/%s", pkt.Filename))
 			if err != nil {
 				s.logger.Fatal(fmt.Sprintf("Failed to open quest file: quests/%s.bin", pkt.Filename))
 			}
