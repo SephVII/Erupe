@@ -420,7 +420,7 @@ func handleMsgMhfEnumerateQuest(s *Session, p mhfpacket.MHFPacket) {
 		{ID: 1026, Value: 999},   // get_grank_cap
 		{ID: 1027, Value: 100},   // get_exchange_rate_festa
 		{ID: 1028, Value: 100},   // get_exchange_rate_cafe
-		{ID: 1030, Value: 8},     // get_gquest_cap
+		{ID: 1030, Value: 10},     // get_gquest_cap
 		{ID: 1031, Value: 100},   // get_exchange_rate_guild (GCP)
 		{ID: 1032, Value: 0},     // isValid_partner
 		{ID: 1044, Value: 200},   // get_rate_tload_time_out
